@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;600;700;800&family=Otomanopee+One&display=swap');
+
 .App {
     height: 100vh;
     background-color: #000000;
@@ -5,6 +7,13 @@
 }
 
 .topbar {
-
+    font-family: 'lexend', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
     color: white;
+}
+
+.fa-slack {
+    font-size: 30px;
+    padding-right: 5px;
 }

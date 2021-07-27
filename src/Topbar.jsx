@@ -4,7 +4,11 @@ export default function Topbar() {
     return (
         <div className="topbar">
             <div className="topbarLeft">
-                <i class="fa fa-slack" aria-hidden="true"></i>
+                <i class="fa fa-slack " aria-hidden="true"></i>
+                <div>
+                <div>HA</div>
+                    <div>SH</div>
+                    </div>
             </div>
             <div  className="topbarRight"></div>
         </div>
