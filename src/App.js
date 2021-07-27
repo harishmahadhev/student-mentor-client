@@ -1,3 +1,4 @@
+import { Route, Switch } from "react-router-dom";
 import "./app.css";
 import Home from "./Home";
 import Show from "./Show";
@@ -7,8 +8,10 @@ function App() {
   return (
     <div className="App">
       <Topbar />
-      <Home />
-      <Show />
+      <div className="body">
+        <Home />
+        <Show />
+      </div>
     </div>
   );
 }
