@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import "./app.css";
+import { useHistory } from "react-router-dom";
 import { Link } from "react-scroll";
-import { Link as Link1 } from "react-router-dom";
+import "./app.css";
 
 export default function Topbar() {
   const [navbar, setNavbar] = useState(false);
+  const history = useHistory();
   const changeBackground = () => {
     if (window.scrollY >= 100) {
       setNavbar(true);
@@ -13,7 +14,6 @@ export default function Topbar() {
     }
   };
   window.addEventListener("scroll", changeBackground);
-
   return (
     <div className={navbar ? "topbar active" : "topbar"}>
       <div className="topbarLeft">
@@ -25,22 +25,55 @@ export default function Topbar() {
       <div className="topbarRight">
         <ul className="topbarLink">
           <li>
-            <Link to="home" smooth={true} duration={100}>
-              <Link1 to="/#home" className="link">
-                home
-              </Link1>
+            <Link
+              to="home"
+              smooth={true}
+              duration={400}
+              onClick={() => history.push("/home")}
+            >
+              home
             </Link>
           </li>
           <li>
-            <Link to="show" smooth={true} duration={100}>
-              <Link1 to="/#show" className="link">
-                Show
-              </Link1>
+            <Link
+              to="show"
+              smooth={true}
+              duration={400}
+              onClick={() => history.push("/show")}
+            >
+              Show
             </Link>
           </li>
-          <li>Create</li>
-          <li>Assign</li>
-          <li>Update</li>
+          <li>
+            <Link
+              to="create"
+              smooth={true}
+              duration={400}
+              onClick={() => history.push("/create")}
+            >
+              Create
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="assign"
+              smooth={true}
+              duration={400}
+              onClick={() => history.push("/assign")}
+            >
+              Assign
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="update"
+              smooth={true}
+              duration={400}
+              onClick={() => history.push("/assign")}
+            >
+              Update
+            </Link>
+          </li>
         </ul>
       </div>
     </div>

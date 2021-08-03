@@ -1,18 +1,24 @@
-import { Route, Switch } from "react-router-dom";
 import "./app.css";
 import Home from "./Home";
-import Show from "./Show";
 import Topbar from "./Topbar";
-
+import Create from './Create';
+import Show from "./Show";
+import Assign from "./Assign";
+import Update from "./Update";
 function App() {
   return (
+
     <div className="App">
       <Topbar />
       <div className="body">
         <Home />
         <Show />
+        <Create />
+        <Assign />
+        <Update />
       </div>
     </div>
+
   );
 }
 
