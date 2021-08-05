@@ -7,10 +7,9 @@ import {
   TableHead,
   TableRow,
 } from "@material-ui/core";
-import { StyledTableCell, useStyles } from "./tableStyles";
+import { StyledTableCell } from "./tableStyles";
 
 export default function Show() {
-  const classes = useStyles();
   return (
     <div className="show pages" id="show">
       <h1 className="showTitle">Mentor Details</h1>
@@ -30,26 +29,113 @@ export default function Show() {
             <li>
               <span>Harish</span>
             </li>
+            <li>
+              <span>Harish</span>
+            </li>
+            <li>
+              <span>Harish</span>
+            </li>
+            <li>
+              <span>Harish</span>
+            </li>
+            <li>
+              <span>Harish</span>
+            </li>
+            <li>
+              <span>Harish</span>
+            </li>
+            <li>
+              <span>Harish</span>
+            </li>
           </ul>
         </div>
-        <TableContainer className="showStudent">
-          <Table className={classes.table} aria-label="customized table">
-            <TableHead>
-              <TableRow>
-                <StyledTableCell>Student Name</StyledTableCell>
-                <StyledTableCell>Email</StyledTableCell>
-                <StyledTableCell>Phone</StyledTableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              <TableRow>
-                <StyledTableCell>Harish</StyledTableCell>
-                <StyledTableCell>harish.vinesh@gmail.com</StyledTableCell>
-                <StyledTableCell>1234568798</StyledTableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
-        </TableContainer>
+        <div className="showStudent">
+          <h3 className="TableTitle"> Students</h3>
+          <TableContainer className="showTable">
+            <Table aria-label="customized table">
+              <TableHead>
+                <TableRow>
+                  <StyledTableCell>Student Name</StyledTableCell>
+                  <StyledTableCell>Email</StyledTableCell>
+                  <StyledTableCell>Phone</StyledTableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                <TableRow>
+                  <StyledTableCell>Harish</StyledTableCell>
+                  <StyledTableCell>harish.vinesh@gmail.com</StyledTableCell>
+                  <StyledTableCell>1234568798</StyledTableCell>
+                </TableRow>
+
+                <TableRow>
+                  <StyledTableCell>Harish</StyledTableCell>
+                  <StyledTableCell>harish.vinesh@gmail.com</StyledTableCell>
+                  <StyledTableCell>1234568798</StyledTableCell>
+                </TableRow>
+                <TableRow>
+                  <StyledTableCell>Harish</StyledTableCell>
+                  <StyledTableCell>harish.vinesh@gmail.com</StyledTableCell>
+                  <StyledTableCell>1234568798</StyledTableCell>
+                </TableRow>
+                <TableRow>
+                  <StyledTableCell>Harish</StyledTableCell>
+                  <StyledTableCell>harish.vinesh@gmail.com</StyledTableCell>
+                  <StyledTableCell>1234568798</StyledTableCell>
+                </TableRow>
+                <TableRow>
+                  <StyledTableCell>Harish</StyledTableCell>
+                  <StyledTableCell>harish.vinesh@gmail.com</StyledTableCell>
+                  <StyledTableCell>1234568798</StyledTableCell>
+                </TableRow>
+                <TableRow>
+                  <StyledTableCell>Harish</StyledTableCell>
+                  <StyledTableCell>harish.vinesh@gmail.com</StyledTableCell>
+                  <StyledTableCell>1234568798</StyledTableCell>
+                </TableRow>
+                <TableRow>
+                  <StyledTableCell>Harish</StyledTableCell>
+                  <StyledTableCell>harish.vinesh@gmail.com</StyledTableCell>
+                  <StyledTableCell>1234568798</StyledTableCell>
+                </TableRow>
+                <TableRow>
+                  <StyledTableCell>Harish</StyledTableCell>
+                  <StyledTableCell>harish.vinesh@gmail.com</StyledTableCell>
+                  <StyledTableCell>1234568798</StyledTableCell>
+                </TableRow>
+                <TableRow>
+                  <StyledTableCell>Harish</StyledTableCell>
+                  <StyledTableCell>harish.vinesh@gmail.com</StyledTableCell>
+                  <StyledTableCell>1234568798</StyledTableCell>
+                </TableRow>
+                <TableRow>
+                  <StyledTableCell>Harish</StyledTableCell>
+                  <StyledTableCell>harish.vinesh@gmail.com</StyledTableCell>
+                  <StyledTableCell>1234568798</StyledTableCell>
+                </TableRow>
+                <TableRow>
+                  <StyledTableCell>Harish</StyledTableCell>
+                  <StyledTableCell>harish.vinesh@gmail.com</StyledTableCell>
+                  <StyledTableCell>1234568798</StyledTableCell>
+                </TableRow>
+                <TableRow>
+                  <StyledTableCell>Harish</StyledTableCell>
+                  <StyledTableCell>harish.vinesh@gmail.com</StyledTableCell>
+                  <StyledTableCell>1234568798</StyledTableCell>
+                </TableRow>
+                <TableRow>
+                  <StyledTableCell>Harish</StyledTableCell>
+                  <StyledTableCell>harish.vinesh@gmail.com</StyledTableCell>
+                  <StyledTableCell>1234568798</StyledTableCell>
+                </TableRow>
+                <TableRow>
+                  <StyledTableCell>Harish</StyledTableCell>
+                  <StyledTableCell>harish.vinesh@gmail.com</StyledTableCell>
+                  <StyledTableCell>1234568798</StyledTableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </div>
       </div>
     </div>
   );

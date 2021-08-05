@@ -20,6 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 500;
 }
 
 .topbar.active {
@@ -87,7 +88,8 @@
         sans-serif;
     font-weight: 400;
     color: white;
-    gap: 30px
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .pages {
@@ -138,7 +140,6 @@
 
 }
 
-
 .createForm label {
     font-size: 15px;
     font-weight: 400;
@@ -155,8 +156,8 @@
     flex-direction: column;
     justify-content: center;
     border-radius: 30px;
-    height: 60%;
     margin: auto;
+    height: 60%;
 }
 
 .createInput {
@@ -185,7 +186,6 @@
     font-weight: 600;
 }
 
-
 .showTitle {
     color: white;
     text-transform: uppercase;
@@ -193,39 +193,147 @@
 
 .TableTitle {
     color: white;
+    margin-left: 15px;
+    text-transform: uppercase;
 }
 
 .BookTable {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
-.showMentor {
+.showMentor,
+.showStudent {
     background-color: #505050;
     flex: 1;
     border-radius: 10px;
     padding: 15px;
+    height: 600px;
 }
 
-.showStudent {
-    flex: 1;
-    background-color: #505050;
+.showMentorList,
+.showTable {
+    padding: 0;
+    overflow-y: auto;
+    height: 500px;
+    scroll-behavior: smooth;
     border-radius: 10px;
 }
 
-.showMentorList {
-    padding: 0;
+.showMentorList::-webkit-scrollbar,
+.showTable::-webkit-scrollbar {
+    width: 10px;
+}
+
+.showMentorList::-webkit-scrollbar-track,
+.showTable::-webkit-scrollbar-track {
+
+    background-color: rgba(255, 255, 255, 0.137);
+    border-radius: 100px;
+}
+
+.showMentorList::-webkit-scrollbar-thumb,
+.showTable::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.315);
+    border-radius: 100px;
 }
 
 .showMentorList li {
     list-style: none;
     padding: 10px;
-    margin: 10px 0;
-    background-color: rgba(255, 255, 255, 0.205);
+    margin: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.137);
     color: white;
     border-radius: 10px;
+    transition: all .6s ease;
 }
 
 .showMentorList li:hover {
-    background-color: violet;
+    background-color: rgba(255, 255, 255, 0.315);
+    transition: all .6s ease;
+}
+
+.assign {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.assignContainer {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.assignStudent,
+.assignMentor {
+    flex: 1;
+    background-color: #505050;
+    border-radius: 10px;
+    height: 60vh;
+}
+
+.assignMentorList,
+.assignStudentList {
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 70px;
+}
+
+.assignTitle {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.assign .assignButton,
+.assign .assignButton:hover {
+    background-color: white;
+    font-size: 17px;
+    font-weight: 600;
+    width: 30%;
+    margin-top: 20px;
+    align-self: center;
+}
+
+.updateIcon {
+    color: #afafaf;
+    font-size: 18px !important;
+}
+
+.updateMentor {
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 70px;
+}
+
+.updateMentor ul {
+    list-style: none;
+    padding: 0;
+}
+
+.updateMentor ul li {
+    text-align: center;
+}
+
+.update {
+    display: flex;
+    flex-direction: column;
+}
+
+.update .updateButton,
+.update .updateButton:hover {
+    background-color: white;
+    font-size: 17px;
+    font-weight: 600;
+    width: 30%;
+    margin-top: 20px;
+    align-self: center;
 }

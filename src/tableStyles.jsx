@@ -12,13 +12,6 @@ export const StyledTableCell = withStyles((theme) => ({
   },
 }))(TableCell);
 
-export const useStyles = makeStyles({
-  table: {
-    backgroundColor: "#505050",
-    height: "auto",
-  },
-});
-
 export const CustomButton = ({ type }) => {
   return (
     <Button
