@@ -21,9 +21,11 @@ export default function CreateStudent() {
     setData(data.message);
   };
 
-  const loginSubmit = (data, e) => {
-    createStudent(data);
-    refreshPage();
+  const loginSubmit = async (data) => {
+    await createStudent(data);
+    setTimeout(() => {
+      refreshPage();
+    }, 1000);
   };
 
   return (

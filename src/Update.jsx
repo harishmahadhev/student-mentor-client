@@ -28,9 +28,11 @@ export default function Update() {
     setData(data.message);
   };
 
-  const handleSubmit = () => {
-    updateMentor(request);
-    refreshPage();
+  const handleSubmit = async () => {
+    await updateMentor(request);
+    setTimeout(() => {
+      refreshPage();
+    }, 1000);
   };
 
   return (
@@ -46,23 +48,25 @@ export default function Update() {
             <div className="assignMentor">
               <h2 className="assignTitle">Students</h2>
               <div className="updateStudentList">
-                {studentList.map((e) => {
-                  return (
-                    <div key={e._id} className="assignMentorList">
-                      <label htmlFor={e.name}>{e.name}</label>
-                      <Radio
-                        name={e.name}
-                        value={e._id}
-                        checked={studentValue === e._id}
-                        onChange={handleStudentRadioChange}
-                        onClick={(event) => {
-                          setSelectMentorValue(e.mentor);
-                          setRequest({ studentId: event.target.value });
-                        }}
-                      />
-                    </div>
-                  );
-                })}
+                {studentList
+                  .filter((e) => e.status)
+                  .map((e) => {
+                    return (
+                      <div key={e._id} className="assignMentorList">
+                        <label htmlFor={e.name}>{e.name}</label>
+                        <Radio
+                          name={e.name}
+                          value={e._id}
+                          checked={studentValue === e._id}
+                          onChange={handleStudentRadioChange}
+                          onClick={(event) => {
+                            setSelectMentorValue(e.mentor);
+                            setRequest({ studentId: event.target.value });
+                          }}
+                        />
+                      </div>
+                    );
+                  })}
               </div>
             </div>
             <div className="assignMentor">

@@ -24,13 +24,15 @@ export default function Assign() {
     setData(data.message);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     const request = {
       mentorId: selectMentorValue,
       studentId: selectStudentValue,
     };
-    assignMentor(request);
-    refreshPage();
+    await assignMentor(request);
+    setTimeout(() => {
+      refreshPage();
+    }, 1000);
   };
 
   return (

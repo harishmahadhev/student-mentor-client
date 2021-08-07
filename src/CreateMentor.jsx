@@ -21,9 +21,11 @@ export default function CreateMentor() {
     setData(data.message);
   };
 
-  const loginSubmit = (data) => {
-    createMentor(data);
-    refreshPage();
+  const loginSubmit = async (data) => {
+    await createMentor(data);
+    setTimeout(() => {
+      refreshPage();
+    }, 1000);
   };
 
   return (
