@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API = axios.create({ baseURL: "http://localhost:5000" });
+const API = axios.create({ baseURL: "https://stu-mentor-harish.herokuapp.com" });
 export const showStudent = () => API.get("/student");
 export const showMentor = () => API.get("/mentor");
 export const createStudent = (formdata) => API.post("/student", formdata);
