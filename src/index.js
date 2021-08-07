@@ -10,7 +10,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Switch>
-        <Route path="*"><App /></Route>
+        <Route path="/"><App /></Route>
       </Switch>
       <App />
     </Router>
