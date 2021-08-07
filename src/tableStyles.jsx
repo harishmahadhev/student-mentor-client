@@ -1,4 +1,4 @@
-import { Button, makeStyles, TableCell, withStyles } from "@material-ui/core";
+import { Button, TableCell, withStyles } from "@material-ui/core";
 
 export const StyledTableCell = withStyles((theme) => ({
   head: {

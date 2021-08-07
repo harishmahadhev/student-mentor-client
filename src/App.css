@@ -177,6 +177,11 @@
     font-weight: 500;
 }
 
+.createError {
+    font-size: 10px;
+    color: red;
+}
+
 .createButton {
     margin-top: 50px;
     border: none;
@@ -213,7 +218,9 @@
 }
 
 .showMentorList,
-.showTable {
+.showStudentList,
+.showTable,
+.updateStudentList {
     padding: 0;
     overflow-y: auto;
     height: 500px;
@@ -222,20 +229,23 @@
 }
 
 .showMentorList::-webkit-scrollbar,
-.showTable::-webkit-scrollbar {
+.showTable::-webkit-scrollbar,
+.updateStudentList::-webkit-scrollbar {
     width: 10px;
 }
 
 .showMentorList::-webkit-scrollbar-track,
-.showTable::-webkit-scrollbar-track {
+.showTable::-webkit-scrollbar-track,
+.updateStudentList::-webkit-scrollbar-track {
 
-    background-color: rgba(255, 255, 255, 0.137);
+    background-color: transparent;
     border-radius: 100px;
 }
 
 .showMentorList::-webkit-scrollbar-thumb,
-.showTable::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.315);
+.showTable::-webkit-scrollbar-thumb,
+.updateStudentList::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.164);
     border-radius: 100px;
 }
 
@@ -249,8 +259,17 @@
     transition: all .6s ease;
 }
 
-.showMentorList li:hover {
+.showMentorList li:hover,
+.showMentorList .active {
     background-color: rgba(255, 255, 255, 0.315);
+    transition: all .4s ease;
+}
+
+.showStudentList li {
+    list-style: none;
+    padding: 10px;
+    margin: 10px 20px;
+    color: white;
     transition: all .6s ease;
 }
 
@@ -271,18 +290,25 @@
     flex: 1;
     background-color: #505050;
     border-radius: 10px;
-    height: 60vh;
+    height: 600px;
 }
 
 .assignMentorList,
 .assignStudentList {
-    padding: 10px;
     font-size: 15px;
     font-weight: 600;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    margin: 0 70px;
+    margin: 10px 40px;
+    padding: 0 10px;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.404);
+}
+
+.assignStudentList label,
+.assignMentorList label {
+    padding-left: 10px;
 }
 
 .assignTitle {
@@ -305,22 +331,10 @@
     font-size: 18px !important;
 }
 
-.updateMentor {
+.updateMentor ul {
     font-size: 15px;
     font-weight: 600;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0 70px;
-}
-
-.updateMentor ul {
-    list-style: none;
     padding: 0;
-}
-
-.updateMentor ul li {
-    text-align: center;
 }
 
 .update {
@@ -336,4 +350,22 @@
     width: 30%;
     margin-top: 20px;
     align-self: center;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.createMessage {
+    font-size: 12px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.updateTitle {
+    text-align: center;
+    font-weight: 400;
 }
