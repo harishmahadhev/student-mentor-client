@@ -1,12 +1,12 @@
 import { Button, Checkbox, Radio } from "@material-ui/core";
 import React from "react";
 import { useContext } from "react";
-import "./app.css";
-import { showLoad } from "./App";
+import "../app.css";
+import { showLoad } from "../App";
 import { HashLoader } from "react-spinners";
 import { useState } from "react";
-import * as api from "./api/index";
-import { refreshPage } from "./form_schema";
+import * as api from "../api/index";
+import { refreshPage } from "../shared/form_schema";
 
 export default function Assign() {
   const [selectMentorValue, setSelectMentorValue] = useState("");

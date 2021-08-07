@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
-import * as api from "./api/index";
+import * as api from "../../api/index";
 import { useForm } from "react-hook-form";
-import { showLoad } from "./App";
-import { formSchema, refreshPage } from "./form_schema";
+import { showLoad } from "../../App";
+import { formSchema, refreshPage } from "../../shared/form_schema";
 
-export default function CreateMentor() {
+export default function CreateStudent() {
   const {
     register,
     handleSubmit,
@@ -14,15 +14,15 @@ export default function CreateMentor() {
   const { setLoading } = useContext(showLoad);
   const [Data, setData] = useState("");
 
-  const createMentor = async (formdata) => {
+  const createStudent = async (formdata) => {
     setLoading(true);
-    const { data } = await api.createMentor(formdata);
+    const { data } = await api.createStudent(formdata);
     setLoading(false);
     setData(data.message);
   };
 
   const loginSubmit = async (data) => {
-    await createMentor(data);
+    await createStudent(data);
     setTimeout(() => {
       refreshPage();
     }, 1000);
@@ -30,7 +30,7 @@ export default function CreateMentor() {
 
   return (
     <div className="createLeft">
-      <div className="createTitle">Create Mentor</div>
+      <div className="createTitle">Create Student</div>
       <form
         autoComplete="off"
         className="createForm"
@@ -58,7 +58,6 @@ export default function CreateMentor() {
         {errors.email && (
           <span className="createError">{errors.email.message}</span>
         )}
-
         <label htmlFor="phone">Phone Number</label>
         <input
           className="createInput"

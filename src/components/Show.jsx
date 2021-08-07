@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import "./app.css";
+import "../app.css";
 import { useState } from "react";
-import { showLoad } from "./App";
+import { showLoad } from "../App";
 import { HashLoader } from "react-spinners";
 
 export default function Show() {

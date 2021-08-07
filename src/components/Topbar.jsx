@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-scroll";
-import "./app.css";
+import "../app.css";
 
 export default function Topbar() {
   const [navbar, setNavbar] = useState(false);

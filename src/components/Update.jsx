@@ -2,10 +2,10 @@ import { Button, IconButton, Radio } from "@material-ui/core";
 import EditIcon from "@material-ui/icons/Edit";
 import React, { useContext } from "react";
 import { useState } from "react";
-import { showLoad } from "./App";
+import { showLoad } from "../App";
 import { HashLoader } from "react-spinners";
-import { refreshPage } from "./form_schema";
-import * as api from "./api/index";
+import { refreshPage } from "../shared/form_schema";
+import * as api from "../api/index";
 
 export default function Update() {
   const [selectMentorValue, setSelectMentorValue] = useState("");

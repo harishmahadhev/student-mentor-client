@@ -1,12 +1,12 @@
 import "./app.css";
-import Home from "./Home";
-import Topbar from "./Topbar";
-import Create from './Create';
-import Show from "./Show";
-import Assign from "./Assign";
-import Update from "./Update";
+import Home from "./components/Home";
 import * as api from "./api/index";
 import { createContext, useEffect, useState } from 'react';
+import Create from './components/create/Create';
+import Update from './components/Update';
+import Topbar from './components/Topbar';
+import Show from './components/Show';
+import Assign from './components/Assign';
 export const showLoad = createContext(null);
 
 function App() {

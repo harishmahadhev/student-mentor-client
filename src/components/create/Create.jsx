@@ -1,5 +1,5 @@
 import React from "react";
-import "./app.css";
+import "../../app.css";
 import CreateMentor from "./CreateMentor";
 import CreateStudent from "./CreateStudent";
 export default function Create() {
