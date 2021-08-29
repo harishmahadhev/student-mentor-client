@@ -12,6 +12,10 @@ ReactDOM.render(
       <Switch>
         <Route path="/"><App /></Route>
       </Switch>
+<<<<<<< HEAD
+=======
+    
+>>>>>>> c85df83032dd8645cb1cd81a3e5318e945c0843c
     </Router>
 
   </React.StrictMode>,
